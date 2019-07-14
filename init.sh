@@ -34,7 +34,7 @@ echo "127.0.1.1		myhostname.localdomain	vbarch"		>>	/etc/hosts
 echo "set root password"
 passwd
 
-pacman -Ss grub
+pacman -Sy grub
 grub-install		/dev/sda
 grub-mkconfig	-o	/boot/grub/grub.cfg
 
