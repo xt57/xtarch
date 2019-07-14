@@ -21,18 +21,21 @@ ln -sf  /usr/share/zoneinfo/America/Chicago  /etc/localtime
 
 hwclock --systohc
 
-/etc/locale.gen
-#	locale-gen
+echo "en_US.UTF-8 UTF-8"		>	/etc/locale.gen
+locale-gen
+echo "LANG=en_US.UTF-8"			>	/etc/locale.conf
 
-#	echo "LANG=en_US.UTF-8"		>	/etc/locale.conf
+echo "vbarch"				> /etc/hostname
 
-echo "vbarch"	> /etc/hostname
-
-echo "127.0.0.1		localhost"							>	/etc/hosts	
-echo "::1			localhost"							>>	/etc/hosts
+echo "127.0.0.1		localhost"				>	/etc/hosts	
+echo "::1		localhost"				>>	/etc/hosts
 echo "127.0.1.1		myhostname.localdomain	vbarch"		>>	/etc/hosts
 
 echo "set root password"
 passwd
 
-#	setup grub here!
+pacman -Ss grub
+grub-install		/dev/sda
+grub-mkconfig	-o	/boot/grub/grub.cfg
+
+echo "xt57 completed"
