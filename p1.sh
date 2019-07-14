@@ -33,7 +33,9 @@ echo "127.0.0.1		localhost"				>	$pre/etc/hosts
 echo "::1		localhost"				>>	$pre/etc/hosts
 echo "127.0.1.1		myhostname.localdomain	vbarch"		>>	$pre/etc/hosts
 
-arch-chroot  /mnt
+cp -p  p2.sh	/mnt
+
+arch-chroot  	/mnt
 
 echo "xt57 completed - press return to shutdown"
 read x
