@@ -33,11 +33,9 @@ echo "127.0.0.1		localhost"				>	$pre/etc/hosts
 echo "::1		localhost"				>>	$pre/etc/hosts
 echo "127.0.1.1		myhostname.localdomain	vbarch"		>>	$pre/etc/hosts
 
-#	echo "set root password"
-#	passwd
+arch-chroot  /mnt
 
-#	pacman -Sy grub
-#	grub-install		/dev/sda
-#	grub-mkconfig	-o	/boot/grub/grub.cfg
+echo "xt57 completed - press return to shutdown"
+read x
+shutdown -h now
 
-#	echo "xt57 p1 completed"
