@@ -35,7 +35,7 @@ echo "127.0.1.1		myhostname.localdomain	vbarch"		>>	$pre/etc/hosts
 
 cp -p  p2.sh	/mnt
 
-arch-chroot  	/mnt	bash -x ./p2.sh
+arch-chroot  	/mnt	"bash -x ./p2.sh"
 
 echo "xt57 completed - press return to shutdown"
 read x
