@@ -17,4 +17,4 @@ pacman -Sy grub
 grub-install		/dev/sda
 grub-mkconfig	-o	/boot/grub/grub.cfg
 
-echo "xt57 p1 completed"
+echo "xt57 p2 completed"
