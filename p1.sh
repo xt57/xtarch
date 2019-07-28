@@ -13,7 +13,7 @@ done
 
 mirror=/etc/pacman.d/mirrorlist
 cp -p								$mirror			$mirror.orig
-egrep 	"princeton|nyu|rutgers"		$mirror.orig >	$mirror
+egrep 	"rutgers|nyu"		$mirror.orig >	$mirror
 
 
 pacstrap  /mnt  base
