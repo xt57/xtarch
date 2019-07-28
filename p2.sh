@@ -26,7 +26,8 @@ pacman	-Sy	sudo
 log=./log
 > $log
 
-for pkg in xorg-server	xorg-xinit	i3-gaps lightdm
+for pkg in	xorg-server	xorg-xinit	i3-gaps		lightdm
+	do
 	print "installing $pkg"			>>	$log
 	pacman -Sy --no-confirm		$pkg	>>	$log 2>&1
 done
