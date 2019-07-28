@@ -23,9 +23,9 @@ pacman	-Sy	sudo
 
 #	i3 research below this point
 
-pacman -Sy	xorg-server	xorg-xinit	lightdm		tmux	i3-gaps
+#pacman -Sy	xorg-server	xorg-xinit	lightdm		tmux	i3-gaps
 
-systemctl	start	lightdm.service
-systemctl	enable	lightdm.service
+#systemctl	start	lightdm.service
+#systemctl	enable	lightdm.service
 
 echo "xt57 p2 completed"
