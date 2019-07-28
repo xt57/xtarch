@@ -25,7 +25,7 @@ pacman	-Sy	sudo
 
 pacman -Sy	xorg-server	xorg-xinit	lightdm		tmux	i3-gaps
 
-systemctl	start	lightdm
-systemctl	enable	lightdm
+systemctl	start	lightdm.service
+systemctl	enable	lightdm.service
 
 echo "xt57 p2 completed"
