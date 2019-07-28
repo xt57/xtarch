@@ -12,8 +12,8 @@ for part in 1 2
 done
 
 mirror=/etc/pacman.d/mirrorlist
-cp -p								$mirror			$mirror.orig
-#egrep 	"rutgers|nyu"		$mirror.orig >	$mirror
+cp -p				$mirror			$mirror.orig
+egrep 	"gigenet"		$mirror.orig >	$mirror
 
 
 pacstrap  /mnt  base
