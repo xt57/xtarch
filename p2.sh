@@ -27,7 +27,7 @@ log=./log
 > $log
 
 for pkg in xorg-server	xorg-xinit	i3-gaps lightdm
-	echo "installing $pkg"			>>	$log
+	print "installing $pkg"			>>	$log
 	pacman -Sy --no-confirm		$pkg	>>	$log 2>&1
 done
 
