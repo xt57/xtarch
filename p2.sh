@@ -17,6 +17,10 @@ pacman -Sy grub
 grub-install		/dev/sda
 grub-mkconfig	-o	/boot/grub/grub.cfg
 
+#	add user buildup here
+
+pacman	-Sy	sudo
+
 #	i3 research below this point
 
 pacman -Sy	xorg-server	xorg-xinit	lightdm		tmux	i3-gaps
