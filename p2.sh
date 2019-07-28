@@ -17,4 +17,11 @@ pacman -Sy grub
 grub-install		/dev/sda
 grub-mkconfig	-o	/boot/grub/grub.cfg
 
+#	i3 research below this point
+
+pacman -Sy	xorg-server	xorg-xinit	lightdm		tmux	i3-gaps
+
+systemctl	start	lightdm
+systemctl	enable	lightdm
+
 echo "xt57 p2 completed"
