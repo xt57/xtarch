@@ -14,7 +14,7 @@ done
 src=/etc/pacman.d/mirrorlist
 dst=/mnt/etc/pacman.d/mirrorlist
 cp -p								$src	$dst.orig
-egrep 	"princeton|nyu|rutgers"		$src	$dst
+egrep 	"princeton|nyu|rutgers"	>	$src
 
 
 
