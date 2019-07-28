@@ -11,11 +11,10 @@ for part in 1 2
 		mount /dev/sda"$part" /mnt
 done
 
-src=/etc/pacman.d/mirrorlist
-dst=/mnt/etc/pacman.d/mirrorlist
-cp -p								$src	$dst.orig
-egrep 	"princeton|nyu|rutgers"	>	$src
-
+mirror=/etc/pacman.d/mirrorlist
+cp -p								$mirror			$mirror.orig
+egrep 	"princeton|nyu|rutgers"	>	$mirror			$mirror.new
+cp -p 								$mirror.new		$mirror
 
 
 pacstrap  /mnt  base
