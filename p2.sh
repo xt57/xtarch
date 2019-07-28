@@ -23,7 +23,12 @@ pacman	-Sy	sudo
 
 #	i3 research below this point
 
-#pacman -Sy	xorg-server	xorg-xinit	lightdm		tmux	i3-gaps
+log=./log
+> $log
+
+for pkg in xorg-server	xorg-xinit	i3-gaps lightdm
+	pacman -Sy --no-confirm		$pkg >> $log 2>&1
+done
 
 #systemctl	start	lightdm.service
 #systemctl	enable	lightdm.service
