@@ -26,15 +26,13 @@ grub-mkconfig	-o	/boot/grub/grub.cfg
 log=./log
 > $log
 
-#for pkg in	xorg-server	xorg-xinit	i3-gaps		lightdm
 for pkg in	xorg-server	xorg-xinit	i3-gaps		dmenu
 	do
+	echo							>>	$log
 	echo "installing $pkg"			>>	$log
+	echo							>>	$log
 	pacman -S --noconfirm	$pkg	>>	$log 2>&1
 done
-
-#systemctl	start	lightdm.service
-#systemctl	enable	lightdm.service
 
 echo "be sure to setup /home/ag20253/.xinit"
 
