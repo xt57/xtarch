@@ -28,10 +28,10 @@ log=./log
 
 for pkg in	xorg-server	xorg-xinit	i3-gaps		dmenu
 	do
-	echo							>>	$log
-	echo "installing $pkg"			>>	$log
-	echo							>>	$log
-	pacman -S --noconfirm	$pkg	>>	$log 2>&1
+	echo									|	tee -a $log
+	echo "installing $pkg"					|	tee -a $log
+	echo									|	tee -a $log
+	pacman -S --noconfirm	$pkg	2>&1 	|	tee -a $log
 done
 
 echo "be sure to setup /home/ag20253/.xinit"
