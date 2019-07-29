@@ -42,6 +42,7 @@ echo "::1			localhost"						>>	$pre/etc/hosts
 echo "127.0.1.1		myhostname.localdomain	vbarch"	>>	$pre/etc/hosts
 
 cp -p  p2.sh	/mnt
+cp -p  p3.sh	/mnt
 
 arch-chroot  	/mnt	bash -x ./p2.sh
 
