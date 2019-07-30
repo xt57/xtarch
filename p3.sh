@@ -2,9 +2,7 @@
 #   p3.sh -- arch install automation
 #
 
-#	add user buildup here
-
-#	pacman	-S	sudo
+pacman	-S --noconfirm	sudo
 
 #	i3 research below this point
 
