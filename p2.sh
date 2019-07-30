@@ -13,11 +13,13 @@ passwd
 systemctl	start	dhcpcd
 systemctl	enable	dhcpcd
 
-pacman -Sy grub
+pacman -Sy --noconfirm	grub
+
 grub-install		/dev/sda
 grub-mkconfig	-o	/boot/grub/grub.cfg
 
 # add users and their attributes here
 useradd	-m	-g wheel	ag20253
+passwd					ag20253
 
 echo "xt57 p2 completed"
