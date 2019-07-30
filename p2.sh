@@ -17,4 +17,7 @@ pacman -Sy grub
 grub-install		/dev/sda
 grub-mkconfig	-o	/boot/grub/grub.cfg
 
+# add users and their attributes here
+useradd	-m	-g wheel	ag20253
+
 echo "xt57 p2 completed"
